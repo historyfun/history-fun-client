@@ -2,11 +2,13 @@ import { Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import choosesong from "../../assests/choosesong.png"
 
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import "./ShowSongs.css"
 import prev from "../../assests/prev.png"
 import next from "../../assests/next.png"
 export default function ShowSongs(props: any) {
+    const { nameparam, phonenumberparam } = useParams();
+
     const [song, setSong] = useState("");
     const [flag, setFlag] = useState<boolean>(false);
 
@@ -24,7 +26,7 @@ export default function ShowSongs(props: any) {
     }
     const nextPage = async () => {
         
-        navigate("../../../SelectPartOfSong", { state: { songs: song} });
+        navigate(`../../../SelectPartOfSong/${nameparam}/${phonenumberparam}`, { state: { songs: song} });
     }
     const prevPage = async () => {
         navigate(-1);
@@ -61,22 +63,7 @@ export default function ShowSongs(props: any) {
             </div >}
 
 
-            {/* <label>העתיקי מהשיר ממנו תרצי לבחור קטע בן 4-6 שורות שיודפס על המזכרת ע"י CTRL+C ואז CTRL+V</label>
-            <textarea
-                onChange={(e) => setPartOfSong(e.target.value)
-                }
-                autoFocus
 
-
-                id="name"
-
-                placeholder="סמני קטע בן 4-6 שורות שיודפס על המזכרת"
-
-                style={{ width: '100%', height: '20%', backgroundColor: "#F4F0ED", top: "30%", right: "0%" }}
-            />     
-            
-            {partOfSong && <h1>{partOfSong}</h1>} */}
-            
             
              </div>
     )

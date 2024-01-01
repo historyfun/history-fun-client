@@ -15,7 +15,7 @@ export default function Login() {
     const [phonenumber, setPhonenumber] = useState("");
     const nextPage = async () => {
         
-        navigate("../Period");
+        navigate(`../Period/${name}/${phonenumber}`);
     }
   
       

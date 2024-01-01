@@ -1,48 +1,49 @@
-import { Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import chossepartofsong from "../../assests/chossepartofsong.png"
 import songbackground from "../../assests/songBackground.png"
 import partOfSongCopied from "../../assests/partOfSongCopied.png"
+import prev from "../../assests/prev.png"
+import next from "../../assests/next.png"
 
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import "./SelectPartOfSong.css"
 export default function SelectPartOfSong(props: any) {
+    const { nameparam, phonenumberparam } = useParams();
+
     const [partOfSong, setPartOfSong] = useState("");
 
     const navigate = useNavigate();
     const location = useLocation();
     // const songs2: any[] = [];
+    const [flag, setFlag] = useState<boolean>(false);
 
     const { songs } = location.state;
-    const [nameofSong, setNameofSong] = React.useState("");
+    const nextPage = async () => {
 
-    
+        navigate(`../DesignBackground/${nameparam}/${phonenumberparam}`, { state: { partOfSong: partOfSong } });
+    }
+    const prevPage = async () => {
+        navigate(-1);
+
+    }
+    useEffect(() => {
+        console.log({ partOfSong });
+
+    }, [partOfSong]);
     return (
         <div className="selectPartOfSong">
-<textarea className="partOfSongCopied"></textarea>
-          <img className="chossepartofsong" src={chossepartofsong} />
-          <img className="songbackground" src={songbackground} />
-          {/* <img className="partOfSongCopied" src={partOfSongCopied} /> */}
-
-            {/* <textarea
-                onChange={(e) => setPartOfSong(e.target.value)
-                }
-                autoFocus
+            {flag && <><img className="prev" src={prev} onClick={() => prevPage()} />
+                <img className="next" src={next} onClick={() => nextPage()} /></>}
+            <textarea className="partOfSongCopied" onChange={(e) => { setPartOfSong(e.target.value); setFlag(true) }}></textarea>
+            <img className="chossepartofsong" src={chossepartofsong} />
+            <img className="songbackground" src={songbackground} />
 
 
-                id="name"
-
-                placeholder="סמני קטע בן 4-6 שורות שיודפס על המזכרת"
-
-                style={{ width: '100%', height: '20%', backgroundColor: "#F4F0ED", top: "30%", right: "0%" }}
-            />     
-            
-            {partOfSong && <h1>{partOfSong}</h1>}  */}
-            
             {songs && <div>
-           {songs}
+                {songs}
             </div >}
-             </div>
+            
+        </div>
     )
 }
 

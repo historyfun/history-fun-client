@@ -1,9 +1,6 @@
 import React, { SetStateAction, useEffect, useRef, useState } from "react";
-import { Button } from "@mui/material";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 
-import { Link, useLocation, useNavigate } from "react-router-dom";
-
-// import {ShowSongs} from "../components/ShowSongs"
 import shabbos from "../../assests/shabbos.png"
 import israel from "../../assests/Israel.png"
 import riddle from "../../assests/riddle.png"
@@ -15,7 +12,9 @@ import chooseSubject from "../../assests/choosesubject.png"
 import "./subject.css"
 import prev from "../../assests/prev.png"
 import next from "../../assests/next.png"
+
 export default function Subject() {
+  const { nameparam, phonenumberparam } = useParams();
 
   const [allSongs, setAllSongs] = useState<any>();
 
@@ -37,7 +36,6 @@ export default function Subject() {
   ]
   const [flag, setFlag] = useState<boolean>(false);
 
-
   useEffect(() => {
     if (allsongs) {
 
@@ -47,7 +45,7 @@ export default function Subject() {
 
 
   const chosenSubject = async (id: any) => {
-console.log(id);
+    console.log(id);
 
     var subject = id;
 
@@ -55,27 +53,25 @@ console.log(id);
 
 
     arr.map((element: any) => {
-      console.log( element );
-if(element['period'] == period)
-      songs.push(element)
+      console.log(element);
+      if (element['period'] == period)
+        songs.push(element)
     })
     console.log({ songs });
     setAllSongs(songs)
-setFlag(true)
+    setFlag(true)
 
-console.log({period});
-
-    
+    console.log({ period });
 
   }
   const nextPage = async () => {
     if (songs)
-    navigate("../../ShowSongs", { state: { songs: allSongs } });
-}
-const prevPage = async () => {
+      navigate(`../../ShowSongs/${nameparam}/${phonenumberparam}`, { state: { songs: allSongs } });
+  }
+  const prevPage = async () => {
     navigate(-1);
 
-}
+  }
   return (
 
     <div className="subject" >
@@ -87,8 +83,9 @@ const prevPage = async () => {
           <img className="subjectBtn" src={btn.img} onClick={() => chosenSubject(btn.id)} />
         )}
       </div>
-      {flag &&<><img className="prev" src={prev} onClick={() => prevPage()} />
-<img className="next" src={next} onClick={() => nextPage()} /></>}
+      {flag && <><img className="prev" src={prev} onClick={() => prevPage()} />
+        <img className="next" src={next} onClick={() => nextPage()} /></>}
+       
     </div>
 
 

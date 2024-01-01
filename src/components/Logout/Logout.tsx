@@ -12,7 +12,6 @@ import "./Logout.css"
 export default function Logout() {
 
 
-  const location = useLocation();
  
 
 

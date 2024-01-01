@@ -19,12 +19,12 @@ const App: React.FunctionComponent = () => {
     <div>    
       <BrowserRouter>
         <Routes>
-          <Route path="/Period" element={<Period />} />
-          <Route path="/Subject" element={<Subject />} />
-          <Route path="/ShowSongs" element={<ShowSongs />} />
-          <Route path="/SelectPartOfSong" element={<SelectPartOfSong />} />
-          <Route path="/DesignBackground" element={<DesignBackground />} />
-          <Route path="/Product" element={<Product />} />
+          <Route path="/Period/:nameparam/:phonenumberparam" element={<Period />} />
+          <Route path="/Subject/:nameparam/:phonenumberparam" element={<Subject />} />
+          <Route path="/ShowSongs/:nameparam/:phonenumberparam" element={<ShowSongs />} />
+          <Route path="/SelectPartOfSong/:nameparam/:phonenumberparam" element={<SelectPartOfSong />} />
+          <Route path="/DesignBackground/:nameparam/:phonenumberparam" element={<DesignBackground />} />
+          <Route path="/Product/:nameparam/:phonenumberparam/:design" element={<Product />} />
           <Route path="/Logout" element={<Logout />} />
 
           <Route path="/" element={<Login />} />
