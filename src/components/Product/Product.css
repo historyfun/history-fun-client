@@ -1,0 +1,34 @@
+.product {
+    background-image: url("../../assests/generalbackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    /* padding-top: 213px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+
+.chooseprintbase {
+    height: 67px;
+
+}
+
+.chooseprintbasebtnsBtn {
+    height: 150px;
+}
+
+.chooseprintbasebtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 20px;
+}

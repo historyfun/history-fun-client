@@ -1,0 +1,31 @@
+.subject {
+  background-image: url("../../assests/generalbackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  /* padding-top: 213px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.subjectBtn {
+  width: 230px;
+}
+
+.chooseSubject {
+  height: 67px;
+}
+
+.btnsSubject {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 10px;
+}

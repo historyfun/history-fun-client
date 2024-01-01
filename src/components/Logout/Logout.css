@@ -1,0 +1,24 @@
+.logout {
+  background-image: url("../../assests/generalbackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  /* padding-top: 213px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+
+.get {
+  height: 67px;
+}
+
+.goodluck {
+  height: 67px;
+}
