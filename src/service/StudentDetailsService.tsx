@@ -7,6 +7,7 @@ export interface IStudentDetails {
   StudentLastName:string,
   DesignId:string,
   ProductToPrintOn:string,
+  PartOfSongToPrint:string
 }
 
 
@@ -15,7 +16,6 @@ class StudentDetailsService {
 
 
   getUserDetails = async (data: string) => {
-
     return axios.get(variables.API_URL + `User/GetUserDetails?id=${data}`,
       {
         headers: {
@@ -33,6 +33,8 @@ class StudentDetailsService {
   }
 
   addUser = async (user: IStudentDetails) => {
+    console.log("student_details from sevice",user);
+
     await axios.post(variables.API_URL + `User/AddUser`, user)
       .catch((error) => {
         console.log(error)

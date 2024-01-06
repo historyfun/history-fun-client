@@ -12,9 +12,11 @@ import prev from "../../assests/prev.png"
 import chooseprintbase from "../../assests/chooseprintbase.png"
 
 import './Product.css'
+import studentDetailsService, { IStudentDetails } from "../../service/StudentDetailsService";
 export default function Product() {
     const navigate = useNavigate();
     const location = useLocation();
+
     const { partOfSong } = location.state;
     const [flag, setFlag] = useState<boolean>(false);
     const { nameparam, phonenumberparam, design } = useParams();
@@ -28,9 +30,30 @@ export default function Product() {
         { img: img5, id: "product5" },
         { img: img6, id: "product6" },]
 
+    const student_details: IStudentDetails = {
+        StudentId: "",
+        StudentFirstName: "",
+        StudentLastName: "",
+        DesignId: "",
+        ProductToPrintOn: "",
+        PartOfSongToPrint: ""
+    };
     const nextPage = async () => {
 
         navigate("../Logout");
+        // if (password)
+
+        student_details.StudentId = phonenumberparam ? phonenumberparam : "";
+        student_details.StudentFirstName = nameparam ? nameparam : "";
+        student_details.PartOfSongToPrint = partOfSong ? partOfSong : "";
+        student_details.DesignId = design ? design : "";
+        student_details.ProductToPrintOn = printBase ? printBase : "";
+
+console.log("student_details from product",student_details);
+
+        await studentDetailsService.addUser(student_details);
+
+
     }
     const prevPage = async () => {
         navigate(-1);
@@ -38,8 +61,14 @@ export default function Product() {
     }
 
     const chosenPrintBase = async (id: any) => {
+
         setPrintBase(id)
         setFlag(true)
+        console.log({ nameparam });
+        console.log({ phonenumberparam });
+        console.log({ design });
+        console.log({ printBase });
+        console.log({ partOfSong });
     }
     return (<div className="product">
         {flag && <><img className="prev" src={prev} onClick={() => prevPage()} />
