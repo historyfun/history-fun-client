@@ -11,14 +11,17 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
+  padding-top: 45px;
 }
 
 .subjectBtn {
-  width: 230px;
+  width: 211px;
 }
 
 .chooseSubject {
-  height: 67px;
+  /* height: 67px; */
+  height: 63px;
+  margin-bottom: 40px;
 }
 
 .btnsSubject {
@@ -27,5 +30,19 @@
   align-items: center;
   flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 10px;
+  /* gap: 10px; */
+  column-gap: 79px;
+  width: 80vw;
+
+}
+
+.arrow {
+  height: 76px;
+}
+
+.btnsArrows {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 26px;
 }

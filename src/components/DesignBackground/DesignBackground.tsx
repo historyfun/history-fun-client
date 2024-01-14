@@ -17,8 +17,8 @@ export default function DesignBackground() {
     const location = useLocation();
     const { partOfSong } = location.state;
 
-    const [flag, setFlag] = useState<boolean>(false);
-    const { nameparam, phonenumberparam} = useParams();
+    const [flag, setFlag] = useState<boolean>(true);
+    const { nameparam, phonenumberparam } = useParams();
 
     const [design, setDesign] = useState("");
     const btns: any = [
@@ -28,7 +28,7 @@ export default function DesignBackground() {
         { img: img4, id: "background4" }]
 
     const nextPage = async () => {
-        
+
         navigate(`../Product/${nameparam}/${phonenumberparam}/${design}`, { state: { partOfSong: partOfSong } });
     }
     const prevPage = async () => {
@@ -37,11 +37,10 @@ export default function DesignBackground() {
     }
     const chosenDesign = async (id: any) => {
         setDesign(id)
-        setFlag(true)
+        setFlag(false)
     }
     return (<div className="designBackground">
-{flag &&<><img className="prev" src={prev} onClick={() => prevPage()} />
-<img className="next" src={next} onClick={() => nextPage()} /></>}
+
         <img className="choosedesign" src={choosedesign1} />
 
         <div className="designbtns">
@@ -49,7 +48,13 @@ export default function DesignBackground() {
                 <img className="designBtn" src={btn.img} onClick={() => chosenDesign(btn.id)} />
             )}
         </div>
-
+        <div className='btnsArrows'>
+            <img className="arrow" src={prev} onClick={() => prevPage()} />
+            <img className="arrow" style={{
+                cursor: flag ? 'not-allowed' : 'pointer',
+                pointerEvents: flag ? 'none' : 'auto',
+            }} src={next} onClick={() => nextPage()} />
+        </div>
     </div>
 
     )

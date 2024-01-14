@@ -18,7 +18,7 @@ export default function Product() {
     const location = useLocation();
 
     const { partOfSong } = location.state;
-    const [flag, setFlag] = useState<boolean>(false);
+    const [flag, setFlag] = useState<boolean>(true);
     const { nameparam, phonenumberparam, design } = useParams();
 
     const [printBase, setPrintBase] = useState("");
@@ -49,7 +49,7 @@ export default function Product() {
         student_details.DesignId = design ? design : "";
         student_details.ProductToPrintOn = printBase ? printBase : "";
 
-console.log("student_details from product",student_details);
+        console.log("student_details from product", student_details);
 
         await studentDetailsService.addUser(student_details);
 
@@ -63,7 +63,7 @@ console.log("student_details from product",student_details);
     const chosenPrintBase = async (id: any) => {
 
         setPrintBase(id)
-        setFlag(true)
+        setFlag(false)
         console.log({ nameparam });
         console.log({ phonenumberparam });
         console.log({ design });
@@ -71,16 +71,21 @@ console.log("student_details from product",student_details);
         console.log({ partOfSong });
     }
     return (<div className="product">
-        {flag && <><img className="prev" src={prev} onClick={() => prevPage()} />
-            <img className="next" src={next} onClick={() => nextPage()} /></>}
+
         <img className="chooseprintbase" src={chooseprintbase} />
 
-        <div className="chooseprintbasebtns">
+        <div className="btnsProduct">
             {btns?.map((btn: any) =>
-                <img className="chooseprintbasebtnsBtn" src={btn.img} onClick={() => chosenPrintBase(btn.id)} />
+                <img className="productBtn" src={btn.img} onClick={() => chosenPrintBase(btn.id)} />
             )}
         </div>
-
+        <div className='btnsArrows'>
+            <img className="arrow" src={prev} onClick={() => prevPage()} />
+            <img className="arrow" style={{
+                cursor: flag ? 'not-allowed' : 'pointer',
+                pointerEvents: flag ? 'none' : 'auto',
+            }} src={next} onClick={() => nextPage()} />
+        </div>
     </div>
 
     )

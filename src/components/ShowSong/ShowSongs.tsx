@@ -10,7 +10,7 @@ export default function ShowSongs(props: any) {
     const { nameparam, phonenumberparam } = useParams();
 
     const [song, setSong] = useState("");
-    const [flag, setFlag] = useState<boolean>(false);
+    const [flag, setFlag] = useState<boolean>(true);
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -25,8 +25,8 @@ export default function ShowSongs(props: any) {
 
     }
     const nextPage = async () => {
-        
-        navigate(`../../../SelectPartOfSong/${nameparam}/${phonenumberparam}`, { state: { songs: song} });
+
+        navigate(`../../../SelectPartOfSong/${nameparam}/${phonenumberparam}`, { state: { songs: song } });
     }
     const prevPage = async () => {
         navigate(-1);
@@ -39,33 +39,40 @@ export default function ShowSongs(props: any) {
     }, []);
 
     const chosenPeriod = async (e: any) => {
-       console.log({e});
-       setSong(e)
-       setFlag(true)
-       
+        console.log({ e });
+        setSong(e)
+        setFlag(false)
+
         // navigate("../../../SelectPartOfSong", { state: { songs: e } });
 
-     }
+    }
     return (
         <div className="showSongs">
-{flag &&<><img className="prev" src={prev} onClick={() => prevPage()} />
-<img className="next" src={next} onClick={() => nextPage()} /></>}
-                  <img className="choosesong" src={choosesong} />
 
-            {songs && <div>
+            <img className="choosesong" src={choosesong} />
+
+            {songs && <div className='allsongs'>
                 {songs.map((e: any) => (
-                    <button onClick={() => chosenPeriod(e['song'])} className="showsong">{e['name']}
-                        <br></br>  </button>
+                    <button onClick={() => chosenPeriod(e['song'])} className="showsong">
+                        <p>{e['name']}</p>
+                        {/* <br></br> */}
+                    </button>
 
                 )
 
                 )}
             </div >}
+  
 
+                <div className='btnsArrows'>
+        <img className="arrow" src={prev} onClick={() => prevPage()} />
+        <img className="arrow" style={{
+                    cursor: flag ? 'not-allowed' : 'pointer',
+                    pointerEvents: flag ? 'none' : 'auto',
+                }} src={next} onClick={() => nextPage()} />
+      </div>
 
-
-            
-             </div>
+        </div>
     )
 }
 

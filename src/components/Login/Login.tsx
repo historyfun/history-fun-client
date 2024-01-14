@@ -14,28 +14,32 @@ export default function Login() {
     const [name, setName] = useState("");
     const [phonenumber, setPhonenumber] = useState("");
     const nextPage = async () => {
-        
+
         navigate(`../Period/${name}/${phonenumber}`);
     }
-  
-      
-    return ( <div className="Login">
-              <div className="contactinfo"><img className="name" src={nameImg} />
-              <img className="phone" src={phone} /></div>
-              <img className="namebackground" src={namebackground} />
-<img className="next" src={next} onClick={() => nextPage()} />
-       <input onChange={(e)=>setName(e.target.value)} placeholder="name"></input>
-       <input onChange={(e)=>setPhonenumber(e.target.value)} placeholder="phone number"></input>
-       <img className="logo" src={logo} />
+
+
+    return (<div className="Login">
+
+        <img className="arrow" src={next} onClick={() => nextPage()} />
+        <div className="contactinfo">
+            <div className='contactBGImge'>
+                <div className='contact'>
+                    <img className="textImg" src={nameImg} />
+                    <input className='input' onChange={(e) => setName(e.target.value)} ></input>
+                </div>
+                <div className='contact'>
+                    <img className="textImg" src={phone} />
+                    <input className='input inputPhone' onChange={(e) => setPhonenumber(e.target.value)} ></input>
+                </div>
+            </div>
         </div>
+
+
+        <img className="logo" src={logo} />
+    </div>
 
     )
 }
-
-
-
-
-
-
 
 

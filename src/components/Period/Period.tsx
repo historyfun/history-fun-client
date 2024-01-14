@@ -32,11 +32,11 @@ export default function Period(props: any) {
         { img: img4, id: "secondPeriod" }
     ]
     const [nameofPeriod, setNameofPeriod] = useState<any>();
-    const [flag, setFlag] = useState<boolean>(false);
+    const [flag, setFlag] = useState<boolean>(true);
 
     const chosenPeriod = async (id: any) => {
         setNameofPeriod(id)
-        setFlag(true)
+        setFlag(false)
         console.log(id);
 
         //  alert(nameofPeriod)
@@ -46,7 +46,7 @@ export default function Period(props: any) {
     const nextPage = async () => {
 
         navigate(`../Subject/${nameparam}/${phonenumberparam}`, { state: { period: nameofPeriod } });
-    }        
+    }
 
     const prevPage = async () => {
         navigate(-1);
@@ -56,8 +56,7 @@ export default function Period(props: any) {
     return (
 
         <div className="period" >
-            {flag && <><img className="prev" src={prev} onClick={() => prevPage()} />
-                <img className="next" src={next} onClick={() => nextPage()} /></>}
+
             <img className="choosePeriod" src={choosePeriod} />
 
             <div className="btns">
@@ -68,7 +67,12 @@ export default function Period(props: any) {
             <div>
 
             </div>
-
+            <div className='btnsArrows'>
+                <img className="arrow" src={prev} onClick={() => prevPage()} />
+                <img className="arrow" style={{
+                    cursor: flag ? 'not-allowed' : 'pointer',
+                    pointerEvents: flag ? 'none' : 'auto',
+                }} src={next} onClick={() => nextPage()} /></div>
         </div>
     )
 }

@@ -1,24 +1,53 @@
-.showsong{ white-space: pre-line;
-background-image: url("../../assests/nameofsong.png");
-background-repeat: no-repeat;
-background-size:contain;
+.showsong {
+  white-space: pre-line;
+  background-image: url("../../assests/nameofsong.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 670px;
+  height: 76px;
+  background-color: transparent;
+  border: unset;
+  font-size: 19pt;
 
 }
 
 .showSongs {
-    background-image: url("../../assests/generalbackground.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-    background-position: center;
-    /* padding-top: 213px; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
-  .choosesong {
-    height: 67px;
-  }
+  background-image: url("../../assests/generalbackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  /* padding-top: 213px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.allsongs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 50vh;
+  overflow: auto;
+}
+
+.choosesong {
+  height: 67px;
+}
+
+.arrow {
+  height: 76px;
+}
+
+.btnsArrows {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 26px;
+}

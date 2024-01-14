@@ -15,7 +15,7 @@ export default function SelectPartOfSong(props: any) {
     const navigate = useNavigate();
     const location = useLocation();
     // const songs2: any[] = [];
-    const [flag, setFlag] = useState<boolean>(false);
+    const [flag, setFlag] = useState<boolean>(true);
 
     const { songs } = location.state;
     const nextPage = async () => {
@@ -32,9 +32,8 @@ export default function SelectPartOfSong(props: any) {
     }, [partOfSong]);
     return (
         <div className="selectPartOfSong">
-            {flag && <><img className="prev" src={prev} onClick={() => prevPage()} />
-                <img className="next" src={next} onClick={() => nextPage()} /></>}
-            <textarea className="partOfSongCopied" onChange={(e) => { setPartOfSong(e.target.value); setFlag(true) }}></textarea>
+           
+            <textarea className="partOfSongCopied" onChange={(e) => { setPartOfSong(e.target.value); setFlag(false) }}></textarea>
             <img className="chossepartofsong" src={chossepartofsong} />
             <img className="songbackground" src={songbackground} />
 
@@ -42,7 +41,13 @@ export default function SelectPartOfSong(props: any) {
             {songs && <div>
                 {songs}
             </div >}
-            
+            <div className='btnsArrows'>
+        <img className="arrow" src={prev} onClick={() => prevPage()} />
+        <img className="arrow" style={{
+                    cursor: flag ? 'not-allowed' : 'pointer',
+                    pointerEvents: flag ? 'none' : 'auto',
+                }} src={next} onClick={() => nextPage()} />
+      </div>
         </div>
     )
 }

@@ -34,7 +34,7 @@ export default function Subject() {
     { img: devotion, id: "devotion" }
 
   ]
-  const [flag, setFlag] = useState<boolean>(false);
+  const [flag, setFlag] = useState<boolean>(true);
 
   useEffect(() => {
     if (allsongs) {
@@ -59,7 +59,7 @@ export default function Subject() {
     })
     console.log({ songs });
     setAllSongs(songs)
-    setFlag(true)
+    setFlag(false)
 
     console.log({ period });
 
@@ -83,9 +83,14 @@ export default function Subject() {
           <img className="subjectBtn" src={btn.img} onClick={() => chosenSubject(btn.id)} />
         )}
       </div>
-      {flag && <><img className="prev" src={prev} onClick={() => prevPage()} />
-        <img className="next" src={next} onClick={() => nextPage()} /></>}
-       
+     <div className='btnsArrows'>
+        <img className="arrow" src={prev} onClick={() => prevPage()} />
+        <img className="arrow" style={{
+                    cursor: flag ? 'not-allowed' : 'pointer',
+                    pointerEvents: flag ? 'none' : 'auto',
+                }} src={next} onClick={() => nextPage()} />
+      </div>
+
     </div>
 
 

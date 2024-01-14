@@ -5,27 +5,32 @@
     height: 100vh;
     width: 100vw;
     background-position: center;
-    /* padding-top: 213px; */
+    padding-top: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 37px;
 }
 
 .periodBtn {
-    width: 200px;
+    width: 252px;
 
 }
 
 .choosePeriod {
-    height: 67px;
+    height: 74px;
 }
-.prev {
-    height: 50px;
-}.next {
-    height: 50px;
-}
+.arrow {
+    height: 66px;
+  }
+  
+  .btnsArrows {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 26px;
+  }
 .btns {
     display: flex;
     justify-content: center;

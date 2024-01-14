@@ -8,40 +8,79 @@
     /* padding-top: 213px; */
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: flex-end;
     gap: 10px;
+    padding: 43px;
+    padding-top: 115px;
 }
 
-
-
-.name {
-    height: 67px;
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-right: 73px;
 }
+
+.inputPhone {
+    width: 200px;
+
+}
+
+.input {
+    border: none;
+    border-bottom: 1px solid black;
+    outline: unset;
+    font-size: 27px;
+    width: 255px;
+}
+
+.textImg {
+    height: 40px;
+}
+
 /* .prev {
     height: 50px;
 }.next {
     height: 50px;
 } */
 
-.phone {
+/* .phone {
     height: 67px;
 
-}
-.contactinfo{
+} */
+
+.contactBGImge {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     flex-wrap: wrap;
-    gap: 10px;
+    height: 326px;
+    width: 546px;
+    gap: 33px;
     flex-direction: column;
+    background-image: url("../../assests/namebackground.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 
 }
-.namebackground{
+.contactinfo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.namebackground {
     height: 100px;
 
 }
+
 .logo {
-    height: 67px;
+    height: 88px;
 }
+.arrow {
+    height: 76px;
+  }

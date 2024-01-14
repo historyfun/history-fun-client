@@ -5,23 +5,23 @@
     height: 100vh;
     width: 100vw;
     background-position: center;
-    /* padding-top: 213px; */
+    padding-top: 129px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 45px;
 }
 
 
 
 .designBtn {
-    width: 200px;
+    width: 250px;
 
 }
 
 .choosedesign {
-    height: 67px;
+    height: 86px;
 }
 
 .designbtns {
@@ -31,4 +31,15 @@
     flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+.arrow {
+  height: 76px;
+}
+
+.btnsArrows {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 26px;
 }

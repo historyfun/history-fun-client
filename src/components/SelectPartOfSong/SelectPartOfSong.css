@@ -24,3 +24,14 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+  
+.arrow {
+  height: 76px;
+}
+
+.btnsArrows {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 26px;
+}
