@@ -28,10 +28,10 @@ export default function Login() {
                     <img className="textImg" src={nameImg} />
                     <input className='input' onChange={(e) => setName(e.target.value)} ></input>
                 </div>
-                {/* <div className='contact'>
+                <div className='contact'>
                     <img className="textImg" src={phone} />
                     <input className='input inputPhone' onChange={(e) => setPhonenumber(e.target.value)} ></input>
-                </div> */}
+                </div>
             </div>
         </div>
 
