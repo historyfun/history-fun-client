@@ -1,0 +1,41 @@
+.period {
+    background-image: url("../../assests/generalbackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 37px;
+}
+
+.periodBtn {
+    width: 252px;
+
+}
+
+.choosePeriod {
+    height: 74px;
+}
+.arrow {
+    height: 66px;
+  }
+  
+  .btnsArrows {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 26px;
+  }
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 10px;
+}

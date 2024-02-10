@@ -11,6 +11,8 @@ import SelectPartOfSong from './components/SelectPartOfSong/SelectPartOfSong';
 import DesignBackground from './components/DesignBackground/DesignBackground';
 import Product from './components/Product/Product';
 import Logout from './components/Logout/Logout';
+import Users from './components/Users/Users';
+
 
 const App: React.FunctionComponent = () => {
 
@@ -26,6 +28,8 @@ const App: React.FunctionComponent = () => {
           <Route path="/DesignBackground/:nameparam/:phonenumberparam" element={<DesignBackground />} />
           <Route path="/Product/:nameparam/:phonenumberparam/:design" element={<Product />} />
           <Route path="/Logout" element={<Logout />} />
+          <Route path="/Users" element={<Users />} />
+
 
           <Route path="/" element={<Login />} />
 

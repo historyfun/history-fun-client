@@ -14,7 +14,16 @@ export interface IStudentDetails {
 
 class StudentDetailsService {
 
+  getUsers = async () => {
+    return axios.get(variables.API_URL + `User/GetAllUsers`,
+        {
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+            },
+            responseType: "json",
+        })
 
+}
   getUserDetails = async (data: string) => {
     return axios.get(variables.API_URL + `User/GetUserDetails?id=${data}`,
       {

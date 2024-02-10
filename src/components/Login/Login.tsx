@@ -7,15 +7,30 @@ import nameImg from "../../assests/fname.png"
 import phone from "../../assests/phone.png"
 import namebackground from "../../assests/namebackground.png"
 import logo from "../../assests/logo.png"
+import studentDetailsService, { IStudentDetails } from "../../service/StudentDetailsService";
+
 
 import './Login.css'
 export default function Login() {
     const navigate = useNavigate();
     const [name, setName] = useState("");
     const [phonenumber, setPhonenumber] = useState("");
-    const nextPage = async () => {
+    const [users, setUsers] = useState<IStudentDetails[]>([]);
 
-        navigate(`../Period/${name}/${phonenumber}`);
+    const nextPage = async () => {
+        if (name == 'admin' && phonenumber == '4321') {
+            navigate(`../Users/`);
+
+        }
+        else {
+            navigate(`../Period/${name}/${phonenumber}`);
+        }
+        await studentDetailsService.getUsers().then(res => {
+            console.log(res.data);
+        }).catch(err =>
+            {console.log({err})
+            })
+
     }
 
 
