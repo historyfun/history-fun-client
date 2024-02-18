@@ -30,7 +30,9 @@ export default function Product() {
         { img: img5, id: "product5" },
         { img: img6, id: "product6" },]
 
+
     const student_details: IStudentDetails = {
+        Id:"",
         StudentId: "",
         StudentFirstName: "",
         StudentLastName: "",
