@@ -3,10 +3,10 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import saveAs from "file-saver";
 
-import img1 from "../../assests/background1.png"
+import img1 from "../../assests/background1.jpg"
 import img2 from "../../assests/background2.png"
-import img3 from "../../assests/background3.png"
-import img4 from "../../assests/background4.png"
+import img3 from "../../assests/background3.jpg"
+import img4 from "../../assests/background4.jpg"
 import choosedesign1 from "../../assests/choosedesign.png"
 import prev from "../../assests/prev.png"
 import next from "../../assests/next.png"
