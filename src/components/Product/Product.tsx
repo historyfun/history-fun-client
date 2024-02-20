@@ -2,12 +2,12 @@ import { useState } from "react";
 
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import next from "../../assests/next.png"
-import img1 from "../../assests/cup.png"
-import img2 from "../../assests/camera.png"
-import img3 from "../../assests/hat.png"
-import img4 from "../../assests/product4.png"
-import img5 from "../../assests/product5.png"
-import img6 from "../../assests/product6.png"
+import img1 from "../../assests/cup.jpg"
+import img2 from "../../assests/mouse_pad.jpg"
+import img3 from "../../assests/key_chain.jpg"
+import img4 from "../../assests/pillow.jpg"
+import img5 from "../../assests/cup_base.jpg"
+import img6 from "../../assests/wood.jpg"
 import prev from "../../assests/prev.png"
 import chooseprintbase from "../../assests/chooseprintbase.png"
 
@@ -23,12 +23,12 @@ export default function Product() {
 
     const [printBase, setPrintBase] = useState("");
     const btns: any = [
-        { img: img1, id: "cup" },
-        { img: img2, id: "camera" },
-        { img: img3, id: "hat" },
-        { img: img4, id: "product4" },
-        { img: img5, id: "product5" },
-        { img: img6, id: "product6" },]
+        { img: img1, id: "כוס" },
+        { img: img2, id: "פד לעכבר" },
+        { img: img3, id: "מחזיק מפתחות" },
+        { img: img4, id: "כרית" },
+        { img: img5, id: "תחתית לכוס" },
+        { img: img6, id: "בלוק עץ" },]
 
 
     const student_details: IStudentDetails = {

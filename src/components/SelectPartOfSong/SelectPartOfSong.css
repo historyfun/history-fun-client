@@ -10,20 +10,67 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 46px;
   }
   .songbackground  {
     height: 90px;
   }
   .chossepartofsong {
-    height: 100px;
+    height: 539px;
+    margin-top: -1px;
+    margin-right: -24%;
   }
-  .partOfSongCopied{
-    height: 100px;
+
+
+  .textareaWrapper {
+    padding: 0 15px; /* Adds padding on the right side for the scrollbar */
+    overflow: hidden; /* Ensures the padding inside the wrapper doesn't show the scrollbar */
+}
+
+.partOfSongCopied {
+  height: 163px;
+  width: calc(100% - -135px);
     background-image: url("../../assests/partOfSongCopied.png");
     background-repeat: no-repeat;
     background-size: cover;
-  }
+    border: none;
+    font-size: 20px;
+    resize: none;
+    outline: none;
+    padding: 15px 40px 15px 15px; /* Adjusted padding: top right bottom left */
+    box-sizing: border-box;
+    overflow-y: auto; /* Allows scrolling */
+    display: block; /* Ensures it fills the wrapper */
+  
+      text-align: center; /* Centers text horizontally */
+      /* padding-top: 2%;
+      padding-bottom: 1px;
+      */
+      
+      font-size: 16pt;
+    
+}
+
+/* Optional: Styling the scrollbar for WebKit browsers */
+/* .partOfSongCopied::-webkit-scrollbar {
+    width: 10px;
+}
+
+.partOfSongCopied::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.partOfSongCopied::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.partOfSongCopied::-webkit-scrollbar-thumb:hover {
+    background: #555;
+} */
+
+
+
+
   
 .arrow {
   height: 76px;
@@ -35,3 +82,154 @@
   justify-content: space-between;
   padding: 0 26px;
 }
+ .BGpart{
+
+ 
+    background-image: url("../../assests/songBackground.png");
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 133%;
+    height: 377px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative; /* This ensures the .scrollWrapper is positioned relative to this container */
+    }
+    
+    .scrollWrapper {
+      overflow-y: auto;
+      height: 80%; /* Adjust this value to control the visible height of the scrollbar */
+      width: 90%; /* Adjust if necessary to ensure it's centered */
+      position: absolute;
+      top: 50%; /* Align center vertically */
+      left: 50%; /* Center horizontally */
+      transform: translate(-50%, -50%); /* Adjust position to truly center based on its size */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+   
+    
+    /* Custom scrollbar styles */
+    .scrollWrapper::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    .scrollWrapper::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.1);
+    }
+    
+    .scrollWrapper::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+    
+    .scrollWrapper {
+      scrollbar-width: thin;
+      scrollbar-color: #888 rgba(0,0,0,0.1);
+    }
+    
+  /* Custom scrollbar styles */
+  .scrollWrapper::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .scrollWrapper::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.1);
+  }
+  
+  .scrollWrapper::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  .scrollWrapper {
+    scrollbar-width: thin;
+    scrollbar-color: #888 rgba(0,0,0,0.1);
+  }
+  
+  .content {
+    padding-top: 7px;
+    padding-bottom: 0%;
+    padding-left: 10%;
+    padding-right: 13%;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16pt;
+    text-align: center;
+
+
+  }
+.BGsong {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 326px;
+  width: 546px;
+  gap: 33px;
+  flex-direction: column;
+
+
+}
+
+
+
+.BGsong {
+  display: flex; /* This will align children in a row */
+  justify-content: space-between; /* This spaces the children evenly */
+  width: 100%; /* Take full width of its parent */
+}
+
+.right, .left {
+  width: 50%; /* Each child takes half of the container's width */
+  /* Add any additional styling here */
+}
+
+/* If you want them to be side by side without any space in between, use this instead */
+.BGsong {
+  display: flex;
+  width: 60%;
+  margin-bottom: 298px;
+  padding-top: 124px;
+}
+
+.right, .left {
+  flex: 1; /* Each child will grow equally to fill the container */
+  /* Additional styling */
+}
+
+.left {
+    display: block; /* Ensures the default flow, but is not strictly necessary since it's the default */
+}
+
+.BGpart {
+    /* Style as needed, ensure it's block-level (default for div) */
+    margin-bottom: 5px; /* Adjust space between the BGpart div and the textarea */
+}
+
+/* For WebKit-based browsers */
+.BGpart::-webkit-scrollbar {
+  width: 8px; /* Adjust the width of the scrollbar */
+}
+
+.BGpart::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1); /* Optional: Adjust track background */
+}
+
+.BGpart::-webkit-scrollbar-thumb {
+  background: #888; /* Adjust thumb color */
+  border-radius: 4px; /* Optional: Add rounded corners to the scrollbar thumb */
+}
+
+/* For Firefox */
+.BGpart {
+  scrollbar-width: thin; /* Makes scrollbar smaller */
+  scrollbar-color: #888 rgba(0,0,0,0.1); /* Adjust thumb and track color */
+}
+

@@ -32,22 +32,35 @@ export default function SelectPartOfSong(props: any) {
     }, [partOfSong]);
     return (
         <div className="selectPartOfSong">
-           
-            <textarea className="partOfSongCopied" onChange={(e) => { setPartOfSong(e.target.value); setFlag(false) }}></textarea>
-            <img className="chossepartofsong" src={chossepartofsong} />
-            <img className="songbackground" src={songbackground} />
-
-
-            {songs && <div>
-                {songs}
-            </div >}
+            <div className='BGsong'>
+                <div className='right'>
+                    <img className="chossepartofsong" src={chossepartofsong} /></div>
+                {/* <img className="songbackground" src={songbackground} /> */}
+               
+                    <div className='left'>
+                    {songs && (
+    <div className='BGpart'>
+      <div className='scrollWrapper'>
+        <div className='content'>
+          {songs.split('\n').map((line:any, index:any) => (
+            <React.Fragment key={index}>
+              {line}<br />
+            </React.Fragment>
+          ))}
+        </div>
+      </div>
+    </div>
+  )}
+                            <textarea className="partOfSongCopied" onChange={(e) => { setPartOfSong(e.target.value); setFlag(false) }}></textarea>
+                    </div>
+            </div >
             <div className='btnsArrows'>
-        <img className="arrow" src={prev} onClick={() => prevPage()} />
-        <img className="arrow" style={{
+                <img className="arrow" src={prev} onClick={() => prevPage()} />
+                <img className="arrow" style={{
                     cursor: flag ? 'not-allowed' : 'pointer',
                     pointerEvents: flag ? 'none' : 'auto',
                 }} src={next} onClick={() => nextPage()} />
-      </div>
+            </div>
         </div>
     )
 }

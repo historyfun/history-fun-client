@@ -22,10 +22,10 @@ export default function DesignBackground() {
 
     const [design, setDesign] = useState("");
     const btns: any = [
-        { img: img1, id: "background1" },
-        { img: img2, id: "background2" },
-        { img: img3, id: "background3" },
-        { img: img4, id: "background4" }]
+        { img: img1, id: "רקע_1" },
+        { img: img2, id: "רקע_2" },
+        { img: img3, id: "רקע_3" },
+        { img: img4, id: "רקע_4" }]
 
     const nextPage = async () => {
 
