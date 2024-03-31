@@ -16,7 +16,7 @@
     height: 90px;
   }
   .chossepartofsong {
-    height: 539px;
+    height: 481px;
     margin-top: -1px;
     margin-right: -24%;
   }
@@ -28,7 +28,7 @@
 }
 
 .partOfSongCopied {
-  height: 163px;
+  height: 137px;
   width: calc(100% - -135px);
     background-image: url("../../assests/partOfSongCopied.png");
     background-repeat: no-repeat;
@@ -91,7 +91,7 @@
       background-repeat: no-repeat;
       background-size: contain;
       width: 133%;
-    height: 377px;
+    height: 322px;
       display: flex;
       justify-content: center;
       align-items: center;
