@@ -31,10 +31,11 @@
   flex-wrap: wrap;
   flex-wrap: wrap;
   /* gap: 10px; */
-  column-gap: 79px;
-  width: 80vw;
-
+  column-gap: 60px;
+  width: 75vw;
 }
+
+
 
 .arrow {
   height: 76px;
