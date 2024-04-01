@@ -16,7 +16,7 @@
     height: 90px;
   }
   .chossepartofsong {
-    height: 481px;
+    height: 438px;
     margin-top: -1px;
     margin-right:  -24%;
   }
@@ -194,7 +194,7 @@
 /* If you want them to be side by side without any space in between, use this instead */
 .BGsong {
   display: flex;
-  width: 60%;
+  width: 42%;
   margin-bottom: 298px;
   padding-top: 124px;
 }
