@@ -10,7 +10,9 @@
   font-size: 19pt;
 
 }
-
+.showsong:active{
+  opacity: 50%;
+}
 .showSongs {
   background-image: url("../../assests/generalbackground.png");
   background-repeat: no-repeat;
@@ -51,4 +53,8 @@
   display: flex;
   justify-content: space-between;
   padding: 0 26px;
+}
+.no_songs{
+  font-size: 27pt;
+  padding: 108px;
 }

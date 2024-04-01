@@ -35,6 +35,9 @@
   .productBtn {
     width: 211px;
   }
+  .productBtn:active{
+    opacity: 50%;
+}
 .arrow {
     height: 76px;
   }

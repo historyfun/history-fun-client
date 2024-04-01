@@ -17,7 +17,9 @@
     width: 252px;
 
 }
-
+.periodBtn:active{
+    opacity: 50%;
+}
 .choosePeriod {
     height: 74px;
 }

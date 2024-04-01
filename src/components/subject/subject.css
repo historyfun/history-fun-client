@@ -17,7 +17,9 @@
 .subjectBtn {
   width: 210px;
 }
-
+.subjectBtn:active{
+  opacity: 50%;
+}
 .chooseSubject {
   /* height: 67px; */
   height: 63px;

@@ -51,7 +51,7 @@ export default function ShowSongs(props: any) {
 
             <img className="choosesong" src={choosesong} />
 
-            {songs && <div className='allsongs'>
+            {songs.length>0 ?<div className='allsongs'>
                 {songs.map((e: any) => (
                     <button onClick={() => chosenPeriod(e['song'])} className="showsong">
                         <p>{e['name']}</p>
@@ -61,7 +61,7 @@ export default function ShowSongs(props: any) {
                 )
 
                 )}
-            </div >}
+            </div >:<div className='no_songs'>לא נמצאו שירים בתקופה זו!</div>}
   
 
                 <div className='btnsArrows'>

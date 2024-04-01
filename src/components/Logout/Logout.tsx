@@ -10,16 +10,17 @@ import goodluck from "../../assests/goodluck.png"
 import "./Logout.css"
 
 export default function Logout() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setTimeout(() => {
+      navigate('/')
+    }, 10000)
+  }, [])
 
 
- 
-
-
-
-
-
-
-
+  window.onload = () => {      navigate('/')
+};
  
   return (
 

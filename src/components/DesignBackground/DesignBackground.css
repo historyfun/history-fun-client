@@ -19,7 +19,9 @@
     width: 250px;
 
 }
-
+.designBtn:active{
+  opacity: 50%;
+}
 .choosedesign {
     height: 86px;
 }

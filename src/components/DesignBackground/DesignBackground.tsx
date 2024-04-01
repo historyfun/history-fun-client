@@ -22,10 +22,10 @@ export default function DesignBackground() {
 
     const [design, setDesign] = useState("");
     const btns: any = [
-        { img: img1, id: "רקע_1" },
-        { img: img2, id: "רקע_2" },
-        { img: img3, id: "רקע_3" },
-        { img: img4, id: "רקע_4" }]
+        { img: img1, id: " רקע_1 -ורוד" },
+        { img: img2, id: "רקע_2 - ירוק" },
+        { img: img3, id: "רקע_3 - כחול" },
+        { img: img4, id: "רקע_4 - סגול" }]
 
     const nextPage = async () => {
 

@@ -31,7 +31,7 @@ export default function Login() {
 
     return (<div className="Login">
 
-        <img className="arrow" src={next} onClick={() => nextPage()} />
+        <input type="image" className="arrow" disabled={name==="" || phonenumber==="" } src={next} onClick={() => nextPage()} />
         <div className="contactinfo">
             <div className='contactBGImge'>
                 <div className='contact'>

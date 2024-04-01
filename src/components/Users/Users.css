@@ -21,16 +21,18 @@
 .choosePeriod {
     height: 74px;
 }
+
 .arrow {
     height: 66px;
-  }
-  
-  .btnsArrows {
+}
+
+.btnsArrows {
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 0 26px;
-  }
+}
+
 .btns {
     display: flex;
     justify-content: center;
@@ -38,4 +40,20 @@
     flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 10px;
+}
+
+.table {
+
+    background: white;
+    height: 350px;
+    width: 80%;
+    margin: 0 0 0 100px;
+}
+
+.table td {
+    border: 1px solid #df2f2f;
+    padding: 5px;
+}
+.td_btn{
+    background-color: antiquewhite;
 }
