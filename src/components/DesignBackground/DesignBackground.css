@@ -17,6 +17,7 @@
 
 .designBtn {
     width: 180px;
+    padding: 13px;
 
 }
 .designBtn:active{
