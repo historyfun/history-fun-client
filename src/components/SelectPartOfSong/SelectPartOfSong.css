@@ -28,7 +28,7 @@
 }
 
 .partOfSongCopied {
-  height: 137px;
+  height: 129px;
   width: calc(100% - -135px);
     background-image: url("../../assests/partOfSongCopied.png");
     background-repeat: no-repeat;
