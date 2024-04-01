@@ -153,15 +153,15 @@
   }
   
   .content {
-    padding-top: 81px;
-    padding-bottom: 0%;
+    /* padding-top: 81px;
+    padding-bottom: 0%; */
     padding-left: 10%;
     padding-right: 13%;
     width: 100%;
     box-sizing: border-box;
     font-size: 10pt;
     text-align: center;
-
+height: calc(100% - 20px);
 
   }
 .BGsong {
