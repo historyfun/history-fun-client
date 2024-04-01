@@ -12,7 +12,7 @@
     align-items: flex-end;
     gap: 10px;
     padding: 43px;
-    padding-top: 115px;
+    /* padding-top: 115px; */
 }
 
 .contact {
