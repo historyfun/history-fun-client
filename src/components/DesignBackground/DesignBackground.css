@@ -16,7 +16,7 @@
 
 
 .designBtn {
-    width: 250px;
+    width: 180px;
 
 }
 .designBtn:active{
@@ -32,7 +32,7 @@
     align-items: center;
     flex-wrap: wrap;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 37px;
     padding: 18px;
 }
 
