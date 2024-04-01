@@ -32,9 +32,9 @@
   align-items: center;
   flex-wrap: wrap;
   flex-wrap: wrap;
-  /* gap: 10px; */
-  column-gap: 142px;
-  width: 75vw;
+  gap: 10px;
+  column-gap: 50px;
+  width: 60vw;
 }
 
 
